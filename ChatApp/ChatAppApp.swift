@@ -78,14 +78,6 @@ struct SwiftUIChatDemoApp: App {
         colors.messageCurrentUserTextColor = .appBackground
         colors.messageOtherUserTextColor = .appBackground
         
-        for familyName in UIFont.familyNames{
-            print(familyName)
-
-            for fontName in UIFont.fontNames(forFamilyName: familyName) {
-                print("--\(fontName)")
-            }
-        }
-        
         fonts.body = .custom("Verdana", size: 14)
         fonts.bodyBold = .custom("Verdana-Bold", size: 14)
         fonts.headline = .custom("Verdana", size: 20)
