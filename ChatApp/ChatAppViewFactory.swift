@@ -73,8 +73,9 @@ class ChatAppViewFactory: ViewFactory {
     }
     
     private func getFriendName(channel: ChatChannel) -> String? {
-        let name = channel.lastActiveMembers.filter { $0.name != "Alice" }
-        return name.first?.name
+        guard let currentUserId = chatClient.currentUserId else { return nil }
+        let members = channel.lastActiveMembers.filter { $0.id != currentUserId }
+        return members.first?.name
     }
     
     func makeMessageTextView(for message: ChatMessage, isFirst: Bool, availableWidth: CGFloat, scrolledId: Binding<String?>) -> some View {
