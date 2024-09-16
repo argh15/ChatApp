@@ -7,18 +7,30 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B96236B22C97CCCC00EB9070 /* ChatAppChannelListDividerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96236B12C97CCCC00EB9070 /* ChatAppChannelListDividerView.swift */; };
 		B96964B72C960AE70058C3DC /* ChatAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96964B62C960AE70058C3DC /* ChatAppApp.swift */; };
-		B96964B92C960AE70058C3DC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96964B82C960AE70058C3DC /* ContentView.swift */; };
 		B96964BB2C960AEA0058C3DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B96964BA2C960AEA0058C3DC /* Assets.xcassets */; };
 		B96964BE2C960AEA0058C3DC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B96964BD2C960AEA0058C3DC /* Preview Assets.xcassets */; };
+		B96964CD2C9635E90058C3DC /* ChatAppViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96964CC2C9635E90058C3DC /* ChatAppViewFactory.swift */; };
+		B96964CF2C963B110058C3DC /* ChatAppHomeHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96964CE2C963B110058C3DC /* ChatAppHomeHeaderView.swift */; };
+		B96964D12C963BEB0058C3DC /* ChatAppHomeHeaderViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96964D02C963BEB0058C3DC /* ChatAppHomeHeaderViewModifier.swift */; };
+		B96964D32C9641650058C3DC /* ChatAppChannelListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96964D22C9641650058C3DC /* ChatAppChannelListItemView.swift */; };
+		B96964D52C97883B0058C3DC /* ChatAppChannelListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96964D42C97883B0058C3DC /* ChatAppChannelListItem.swift */; };
+		B96964D82C978EBC0058C3DC /* StreamChatSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = B96964D72C978EBC0058C3DC /* StreamChatSwiftUI */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B96236B12C97CCCC00EB9070 /* ChatAppChannelListDividerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatAppChannelListDividerView.swift; sourceTree = "<group>"; };
 		B96964B32C960AE70058C3DC /* ChatApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChatApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B96964B62C960AE70058C3DC /* ChatAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatAppApp.swift; sourceTree = "<group>"; };
-		B96964B82C960AE70058C3DC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		B96964BA2C960AEA0058C3DC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B96964BD2C960AEA0058C3DC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		B96964C72C9611D90058C3DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		B96964CC2C9635E90058C3DC /* ChatAppViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatAppViewFactory.swift; sourceTree = "<group>"; };
+		B96964CE2C963B110058C3DC /* ChatAppHomeHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatAppHomeHeaderView.swift; sourceTree = "<group>"; };
+		B96964D02C963BEB0058C3DC /* ChatAppHomeHeaderViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatAppHomeHeaderViewModifier.swift; sourceTree = "<group>"; };
+		B96964D22C9641650058C3DC /* ChatAppChannelListItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatAppChannelListItemView.swift; sourceTree = "<group>"; };
+		B96964D42C97883B0058C3DC /* ChatAppChannelListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatAppChannelListItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B96964D82C978EBC0058C3DC /* StreamChatSwiftUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,8 +64,14 @@
 		B96964B52C960AE70058C3DC /* ChatApp */ = {
 			isa = PBXGroup;
 			children = (
+				B96964C72C9611D90058C3DC /* Info.plist */,
 				B96964B62C960AE70058C3DC /* ChatAppApp.swift */,
-				B96964B82C960AE70058C3DC /* ContentView.swift */,
+				B96964CC2C9635E90058C3DC /* ChatAppViewFactory.swift */,
+				B96964CE2C963B110058C3DC /* ChatAppHomeHeaderView.swift */,
+				B96964D02C963BEB0058C3DC /* ChatAppHomeHeaderViewModifier.swift */,
+				B96964D42C97883B0058C3DC /* ChatAppChannelListItem.swift */,
+				B96964D22C9641650058C3DC /* ChatAppChannelListItemView.swift */,
+				B96236B12C97CCCC00EB9070 /* ChatAppChannelListDividerView.swift */,
 				B96964BA2C960AEA0058C3DC /* Assets.xcassets */,
 				B96964BC2C960AEA0058C3DC /* Preview Content */,
 			);
@@ -81,8 +100,12 @@
 			buildRules = (
 			);
 			dependencies = (
+				B96964CB2C9634AE0058C3DC /* PBXTargetDependency */,
 			);
 			name = ChatApp;
+			packageProductDependencies = (
+				B96964D72C978EBC0058C3DC /* StreamChatSwiftUI */,
+			);
 			productName = ChatApp;
 			productReference = B96964B32C960AE70058C3DC /* ChatApp.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +134,9 @@
 				Base,
 			);
 			mainGroup = B96964AA2C960AE70058C3DC;
+			packageReferences = (
+				B96964D62C978EBC0058C3DC /* XCRemoteSwiftPackageReference "stream-chat-swiftui" */,
+			);
 			productRefGroup = B96964B42C960AE70058C3DC /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -137,12 +163,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B96964B92C960AE70058C3DC /* ContentView.swift in Sources */,
+				B96964CF2C963B110058C3DC /* ChatAppHomeHeaderView.swift in Sources */,
+				B96964D32C9641650058C3DC /* ChatAppChannelListItemView.swift in Sources */,
+				B96964D12C963BEB0058C3DC /* ChatAppHomeHeaderViewModifier.swift in Sources */,
 				B96964B72C960AE70058C3DC /* ChatAppApp.swift in Sources */,
+				B96964CD2C9635E90058C3DC /* ChatAppViewFactory.swift in Sources */,
+				B96236B22C97CCCC00EB9070 /* ChatAppChannelListDividerView.swift in Sources */,
+				B96964D52C97883B0058C3DC /* ChatAppChannelListItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B96964CB2C9634AE0058C3DC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = B96964CA2C9634AE0058C3DC /* StreamChatSwiftUI */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		B96964BF2C960AEA0058C3DC /* Debug */ = {
@@ -197,7 +235,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -254,7 +292,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -275,6 +313,10 @@
 				DEVELOPMENT_TEAM = YV8PDCP6NZ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ChatApp/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "This is needed for using camera in the chat";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "This is needed for sending images in the chat";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "This is needed for sending images in the chat";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -286,7 +328,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.ChatApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.personal.ChatApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -305,6 +347,10 @@
 				DEVELOPMENT_TEAM = YV8PDCP6NZ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ChatApp/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "This is needed for using camera in the chat";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "This is needed for sending images in the chat";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "This is needed for sending images in the chat";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -316,7 +362,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.ChatApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.personal.ChatApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -346,6 +392,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B96964C42C9611370058C3DC /* XCRemoteSwiftPackageReference "stream-chat-swiftui" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/getstream/stream-chat-swiftui";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+		B96964D62C978EBC0058C3DC /* XCRemoteSwiftPackageReference "stream-chat-swiftui" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/getstream/stream-chat-swiftui";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.63.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B96964CA2C9634AE0058C3DC /* StreamChatSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B96964C42C9611370058C3DC /* XCRemoteSwiftPackageReference "stream-chat-swiftui" */;
+			productName = StreamChatSwiftUI;
+		};
+		B96964D72C978EBC0058C3DC /* StreamChatSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B96964D62C978EBC0058C3DC /* XCRemoteSwiftPackageReference "stream-chat-swiftui" */;
+			productName = StreamChatSwiftUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B96964AB2C960AE70058C3DC /* Project object */;
 }
