@@ -1,6 +1,7 @@
 <h1 align="center" id="title">Chat App</h1>
 
-<p id="description">This cryptocurrency tracking app iOS application (only iPhones) uses MVVM Architecture Combine and CoreData. This app aims to solidify the concepts of SwiftUI and Combine. It uses multi-threading animations, publishers/subscribers, and data persistence and supports dark mode.\nIt was a lot of fun exploring these concepts. I'll be rolling out a new version of this app soon.</p>
+<p id="description">This iOS chat application (only iPhones) leverages SwiftUI and the StreamChat SDK to provide a feature-rich messaging experience. It focuses on exploring and utilizing the full potential of the StreamChat SDK, offering real-time messaging, customizable UI components, and seamless user interactions. The app includes dynamic message bubbles, real-time updates, and integrated image/text message support.</p>
+<p id="description">Developing this app was an exciting journey into advanced chat functionalities, and I’m eager to introduce new features in the upcoming version.</p>
 
 <h2>Installation Steps:</h2>
 
