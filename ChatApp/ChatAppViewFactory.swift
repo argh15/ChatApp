@@ -13,9 +13,14 @@ import StreamChat
 class ChatAppViewFactory: ViewFactory {
     
     @Injected(\.chatClient) var chatClient: ChatClient
+    @Injected(\.fonts) var fonts: Fonts
     
     func makeChannelListHeaderViewModifier(title: String) -> ChatAppHomeHeaderViewModifier {
         ChatAppHomeHeaderViewModifier(title: "Connections")
+    }
+    
+    func makeChannelHeaderViewModifier(for channel: ChatChannel) -> some ChatChannelHeaderViewModifier {
+        ChatAppChannelHeaderViewModifier(channel: channel)
     }
     
     func makeChannelListItem(
@@ -40,7 +45,7 @@ class ChatAppViewFactory: ViewFactory {
                 selectedChannel: selectedChannel)
         }
     
-    func makeChannelListBackground(colors: ColorPalette) -> some View {
+    func makeMessageList(colors: ColorPalette) -> some View {
         Color(.appBackground)
             .edgesIgnoringSafeArea(.bottom)
     }
@@ -52,4 +57,52 @@ class ChatAppViewFactory: ViewFactory {
     func makeChannelListTopView(searchText: Binding<String>) -> some View {
         EmptyView()
     }
+    
+    func makeComposerViewModifier() -> some ViewModifier {
+        ChatAppComposerViewModifider()
+    }
+    
+    func makeEmptyMessagesView(for channel: ChatChannel, colors: ColorPalette) -> some View {
+        Text("This is the beginning of your conversation with \(getFriendName(channel: channel) ?? "your friend(s)").")
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .multilineTextAlignment(.center)
+            .padding()
+            .background(.appBackground)
+            .font(fonts.headline)
+            .foregroundStyle(.messageText)
+    }
+    
+    private func getFriendName(channel: ChatChannel) -> String? {
+        let name = channel.lastActiveMembers.filter { $0.name != "Alice" }
+        return name.first?.name
+    }
+    
+    func makeMessageTextView(for message: ChatMessage, isFirst: Bool, availableWidth: CGFloat, scrolledId: Binding<String?>) -> some View {
+        ChatAppMessageTextView(message: message, isFirst: isFirst)
+    }
+    
+    func makeMessageDateView(for message: ChatMessage) -> some View {
+        EmptyView()
+    }
+    
+    func makeMessageReadIndicatorView(channel: ChatChannel, message: ChatMessage) -> some View {
+        EmptyView()
+    }
+    
+    func makeScrollToBottomButton(unreadCount: Int, onScrollToBottom: @escaping () -> Void) -> some View {
+        EmptyView()
+    }
+    
+    func makeImageAttachmentView(for message: ChatMessage, isFirst: Bool, availableWidth: CGFloat, scrolledId: Binding<String?>) -> some View {
+        ChatAppMessageImageView(message: message, width: availableWidth, isFirst: isFirst)
+    }
+    
+    func makeTrailingComposerView(enabled: Bool, cooldownDuration: Int, onTap: @escaping () -> Void) -> some View {
+        ChatAppComposerSendButton(enabled: enabled, onTap: onTap)
+    }
+    
+    func makeLeadingComposerView(state: Binding<PickerTypeState>, channelConfig: ChannelConfig?) -> some View {
+        ChatAppComposerCameraButton(pickerTypeState: state)
+    }
+    
 }

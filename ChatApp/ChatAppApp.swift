@@ -20,16 +20,19 @@ struct SwiftUIChatDemoApp: App {
     
     var chatClient: ChatClient = {
         var config = ChatClientConfig(apiKey: .init("x3wrespx5rdt"))
-        //8br4watad788
 
         let client = ChatClient(config: config)
         return client
     }()
     
     @State var streamChat: StreamChat?
+    var appearance: Appearance?
+    var utils: Utils?
     
     init() {
-        streamChat = StreamChat(chatClient: chatClient)
+        setUtils()
+        setAppearance()
+        streamChat = StreamChat(chatClient: chatClient, appearance: appearance!, utils: utils!)
         connectUser()
     }
     
@@ -60,4 +63,43 @@ struct SwiftUIChatDemoApp: App {
             }
         }
     }
+    
+    private mutating func setAppearance() {
+        var colors = ColorPalette()
+        var fonts = Fonts()
+        
+        colors.tintColor = .white
+        colors.text = .white
+        colors.background = .appBackground
+        colors.highlightedAccentBackground = .unreadDot
+        colors.background1 = .appBackground
+        colors.messageCurrentUserBackground = [.unreadDot]
+        colors.messageOtherUserBackground = [.white]
+        colors.messageCurrentUserTextColor = .appBackground
+        colors.messageOtherUserTextColor = .appBackground
+        
+        for familyName in UIFont.familyNames{
+            print(familyName)
+
+            for fontName in UIFont.fontNames(forFamilyName: familyName) {
+                print("--\(fontName)")
+            }
+        }
+        
+        fonts.body = .custom("Verdana", size: 14)
+        fonts.bodyBold = .custom("Verdana-Bold", size: 14)
+        fonts.headline = .custom("Verdana", size: 20)
+        fonts.subheadline = .custom("Verdana", size: 14)
+        fonts.footnote = .custom("Verdana", size: 10)
+        
+        appearance = Appearance(colors: colors, fonts: fonts)
+    }
+    
+    private mutating func setUtils() {
+        let messageListConfig = MessageListConfig(
+            messagePopoverEnabled: false
+        )
+        utils = Utils(messageListConfig: messageListConfig)
+    }
+    
 }

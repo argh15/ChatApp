@@ -23,9 +23,10 @@ struct ChatAppChannelListItem: View {
             ChatAppChannelListItemView(
                 channelName: channelName,
                 avatar: avatar,
-                lastMessage: channel.latestMessages.first?.text ?? "No Messages",
+                lastMessage: channel.latestMessages.first?.text ?? "Send a message and embark on a journey of discovery together.",
                 hasUnreadMessage: channel.unreadCount.messages > 0)
             .padding(.trailing)
+            .contentShape(Rectangle())
         }
         .onTapGesture {
             onItemTap(channel)

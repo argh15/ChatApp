@@ -6,8 +6,11 @@
 //
 
 import SwiftUI
+import StreamChatSwiftUI
 
 struct ChatAppChannelListItemView: View {
+    
+    @Injected(\.fonts) var fonts
     
     let channelName: String
     let avatar: UIImage
@@ -34,34 +37,20 @@ struct ChatAppChannelListItemView: View {
             VStack(alignment: .leading, spacing: 4) {
                 
                 Spacer()
-                                
+                
                 Text(channelName)
-                    .font(.title3)
+                    .font(fonts.headline)
                     .foregroundStyle(.white)
                     .lineLimit(1)
-                    .border(Color.pink)
                     .frame(maxWidth: .infinity, minHeight: 40, alignment: .bottomLeading)
                 
-                
-                if hasUnreadMessage {
-                    Text(lastMessage)
-                        .foregroundStyle(.unreadMessageText)
-                        .border(Color.pink)
-                        .font(.subheadline)
-                        .fixedSize(horizontal: false, vertical: true)
-                        .lineLimit(2)
-                        .frame(maxWidth: .infinity, minHeight: 40, alignment: .topLeading)
-                        .padding(.bottom, 4)
-                } else {
-                    Text(lastMessage)
-                        .foregroundStyle(.messageText)
-                        .border(Color.pink)
-                        .font(.subheadline)
-                        .fixedSize(horizontal: false, vertical: true)
-                        .lineLimit(2)
-                        .frame(maxWidth: .infinity, minHeight: 40, alignment: .topLeading)
-                        .padding(.bottom, 4)
-                }
+                Text(lastMessage)
+                    .foregroundStyle(hasUnreadMessage ? .unreadMessageText : .messageText)
+                    .font(fonts.subheadline)
+                    .fixedSize(horizontal: false, vertical: true)
+                    .lineLimit(2)
+                    .frame(maxWidth: .infinity, minHeight: 40, alignment: .topLeading)
+                    .padding(.bottom, 4)
             }
         }
     }

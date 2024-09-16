@@ -16,7 +16,9 @@ struct ChatAppHomeHeaderViewModifier: ChannelListHeaderViewModifier {
         content.toolbar {
             ChatAppHomeHeaderView(title: title)
         }
-        .background(.appBackground)
+        .toolbarBackground(.appBackground, for: .navigationBar)
+        .toolbarBackground(.visible, for: .navigationBar)
     }
+
     
 }
