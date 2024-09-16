@@ -11,6 +11,12 @@
 
 <h2>🚀 Demo</h2>
 <a href=https://appetize.io/app/b_bqeu4hk56xe7iwghd7zi2ssaxi>Link to demo </a>
+
+*   Use the bob.html to start a chat between you (Alice) and Bob
+*   You will only be able to chat with existing Channels/Member (Creating Channel and Start a new conversation is WIP)
+*   Replace the constants with your own API Keys and Tokens
+*   To generate API key go to - https://getstream.io/chat/docs/sdk/ios/swiftui/getting-started/
+*   To generate Tokens go to - https://getstream.io/chat/docs/ios-swift/tokens_and_authentication/?language=swift
   
 <h2>🧐 Features</h2>
 
