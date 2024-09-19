@@ -11,7 +11,7 @@
 
 <h2>🚀 Demo</h2>
 
-*   <a href=https://appetize.io/app/b_bqeu4hk56xe7iwghd7zi2ssaxi>Link to demo </a>
+*   <a href=https://appetize.io/app/b_s2pair272n4cevial5xgc6w7le>Link to demo </a>
 *   Use the bob.html to start a chat between you (Alice) and Bob
 *   You will only be able to chat with existing Channels/Member (Creating Channel and Start a new conversation is WIP)
 *   Replace the constants with your own API Keys and Tokens
